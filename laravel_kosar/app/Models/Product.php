@@ -15,4 +15,10 @@ class Product extends Model
         'type_id',
         'date',
     ];
+
+
+    public function type()
+    {
+        return $this->belongsTo(ProductType::class, 'type_id');
+    }
 }
